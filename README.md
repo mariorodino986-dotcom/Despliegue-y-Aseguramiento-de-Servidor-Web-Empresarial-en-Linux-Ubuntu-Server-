@@ -35,7 +35,7 @@ Se estableció la conexión remota desde la máquina anfitriona (Windows) utiliz
 Conexión SSH desde el terminal de Windows:
 ssh mario@192.168.110.130
 
-[AQUÍ INSERTA TU CAPTURA 2: El terminal de Windows conectado por SSH al servidor]
+![Acceso al servidor](Capturas/acceso_al_servidor.png)
 
 Fase 2: Implementación y Personalización del Servicio Web (Nginx)
 Se optó por Nginx debido a su alto rendimiento, escalabilidad y bajo consumo de recursos en entornos de producción.

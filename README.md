@@ -28,7 +28,7 @@ Tras el arranque, se auditó la interfaz de red para identificar la dirección I
 Comando utilizado para auditar el direccionamiento de la máquina:
 ip a
 
-![IP](ipa.png)
+![IP](Capturas/ip_a.png)
 
 Se estableció la conexión remota desde la máquina anfitriona (Windows) utilizando las credenciales de administración local.
 

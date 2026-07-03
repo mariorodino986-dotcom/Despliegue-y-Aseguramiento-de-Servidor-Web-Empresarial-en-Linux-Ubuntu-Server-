@@ -46,13 +46,13 @@ sudo apt update && sudo apt install nginx -y
 Se verificó que el demonio del servicio se encontrara en estado de ejecución activo (active running):
 sudo systemctl status nginx
 
-[AQUÍ INSERTA TU CAPTURA 3: El estado del servicio Nginx en verde]
+![Nginx activo](Capturas/nginx_enabled.png)
 
 Se modificó el archivo index principal localizado en la ruta de producción (/var/www/html/) utilizando el editor nano para personalizar la landing page corporativa del servidor.
 
 Se comprobó el correcto funcionamiento accediendo a través del navegador web del equipo local.
 
-[AQUÍ INSERTA TU CAPTURA 4: El navegador web abriendo la IP del servidor con tu web personalizada]
+![Nginx web](Capturas/editando_nginx.png)
 
 Fase 3: Hardening Perimetral (Configuración de Firewall UFW)
 Un servidor en producción no debe exponer puertos innecesarios. Se aplicó una política de seguridad restrictiva mediante el firewall nativo UFW.
@@ -67,7 +67,7 @@ sudo ufw status verbose
 
 La política por defecto pasó a denegar (deny) todo el tráfico entrante no explícito, mitigando vectores de ataque comunes.
 
-[AQUÍ INSERTA TU CAPTURA 5: El estado detallado del firewall mostrando las reglas activas]
+![firewall](Capturas/ufw_status.png)
 
 Fase 4: Persistencia y Configuración de Red Estática (Netplan)
 Para evitar la pérdida de conectividad debido a variaciones en la asignación dinámica de IPs (DHCP), se configuró un direccionamiento estático permanente modificando los archivos de configuración de Netplan en formato YAML.
@@ -77,7 +77,7 @@ Se editó el archivo de configuración asignando la IP del servidor de forma est
 Se aplicaron los cambios en caliente garantizando la estabilidad de la infraestructura:
 sudo netplan apply
 
-[AQUÍ INSERTA TU CAPTURA 6: Tu archivo .yaml modificado o el comando aplicado con éxito]
+![Red estática](Capturas/Fijar_IP.png)
 
 4. Conclusiones y Aprendizajes Adquiridos
 Administración Headless: Adquisición de soltura en entornos CLI (interfaz de línea de comandos) orientados a servidores reales.
